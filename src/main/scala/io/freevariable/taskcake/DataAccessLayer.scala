@@ -36,4 +36,8 @@ trait DataAccessLayer {
     tasks.filter(_.userId === id).result
   }
 
+  def getUsers()(implicit ec: ExecutionContext): DBIO[Seq[(Int, String, String)]] = {
+    users.result
+  }
+
 }

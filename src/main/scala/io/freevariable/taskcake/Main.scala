@@ -5,7 +5,7 @@ import slick.jdbc.JdbcBackend.Database
 import scala.concurrent.ExecutionContext.Implicits.global
 
 object Main extends App {
-  val database = Database.forConfig("postgres")
+  val database = Database.forConfig("tasks.db")
 
   val dataAccess = new PostgresDataAccessLayer(database)
 

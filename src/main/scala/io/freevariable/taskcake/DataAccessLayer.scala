@@ -1,13 +1,10 @@
 package io.freevariable.taskcake
 
-import slick.jdbc.JdbcProfile
-
 import scala.concurrent.ExecutionContext
 
 
 trait DataAccessLayer {
-
-  val profile: JdbcProfile
+  self: DatabaseLayer =>
   import profile.api._
 
   class Users(tag: Tag) extends Table[(Int, String, String)](tag, "users") {

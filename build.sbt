@@ -13,7 +13,7 @@ lazy val root = (project in file("."))
 
 libraryDependencies ++= Seq(
   slick,
-  hikaricp,
+  slickHikaricp,
   postgresql,
   h2 % Test,
   munit % Test,
